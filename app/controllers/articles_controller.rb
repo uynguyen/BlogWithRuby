@@ -4,10 +4,12 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    per_page = 5
     if params[:search]
-      @articles = Article.search(params[:search]).order("created_at DESC")
+      @articles = Article.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => per_page)
     else
-      @articles = Article.all.order("created_at DESC")
+      # @articles = Article.all.order("created_at DESC")
+      @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => per_page)
     end
     
     @Markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
@@ -16,6 +18,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article.update(view: @article.view += 1)
   end
 
   # GET /articles/new

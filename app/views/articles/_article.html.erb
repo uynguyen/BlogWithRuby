@@ -7,8 +7,10 @@
           <p class="card-text"><%= @Markdown.render(article.body).html_safe %></p>
         </div>
         <div class='card-footer'>
-          <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-info-outline' %>
+          <div><%= article.view %> views </div>
+          <%= link_to 'Show', article, class: 'btn btn-info-outline' %>
           <%= link_to 'Remove', article, method: :delete, data: { confirm: 'Do you want to remove this article? '}, class: 'btn btn-danger-outline' %>
+
         </div>
       </div>
     
