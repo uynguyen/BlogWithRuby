@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: blog_production
-  username: blog
-  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+  database: d7bqkesf5qjjtt
+  username: tjkrhphxiplbuk
+  password: MkuFnj1vMY5YW98DpAmo72Yubn
+  host: ec2-54-83-29-133.compute-1.amazonaws.com
