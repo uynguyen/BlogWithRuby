@@ -1,0 +1,2 @@
+# BlogWithRuby
+Homework assignment, CoderSchool
