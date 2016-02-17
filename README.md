@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](/path/to/your/gif/file)
+![Video Walkthrough](demo.gif)
 
 ## License
 
