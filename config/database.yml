@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: blog_production
-  username: blog
-  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+  url: postgres://vkvstfcyqrywyf:dZvrTItfQSo7x_I5KiNp86zkL3@ec2-107-20-224-236.compute-1.amazonaws.com:5432/dff9l57ji8tpo6
+  # <<: *default
+  # database: blog_production
+  # username: blog
+  # password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
